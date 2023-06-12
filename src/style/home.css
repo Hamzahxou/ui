@@ -1,0 +1,353 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100vw;
+  /* background-color: #232323;
+  color: #f0f4f7; */
+  background-color: #f0f8ff;
+  color: #232323;
+  overflow-x: hidden;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+header .menu {
+  position: relative;
+  margin-left: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #363936;
+  transition: 1s;
+}
+
+header .informasi {
+  position: relative;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  height: 50px;
+  padding: 0 1rem;
+  font-size: 2rem;
+}
+
+header .informasi .pesan {
+  position: relative;
+  top: 2px;
+  color: #363936;
+  cursor: pointer;
+}
+
+header .informasi .pesan span {
+  position: absolute;
+  display: inline-block;
+  font-size: 1rem;
+  background-color: red;
+  border: 2px solid #f0f8ff;
+  height: 15px;
+  width: 15px;
+  z-index: 2;
+  border-radius: 50%;
+  transform: translateX(-12px) translateY(-2px);
+  animation: notif 2s infinite alternate forwards ease-in-out;
+}
+
+/* header .informasi .pesan::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  font-size: 1rem;
+  background-color: #f0f8ff;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  transform: translateX(-12px) translateY(-1px);
+  z-index: 1;
+} */
+
+@keyframes notif {
+  100% {
+    opacity: 0;
+  }
+}
+
+header .informasi .boxPesan {
+  position: absolute;
+  background-color: #f0f4f7;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  width: 300px;
+  top: -70px;
+  right: -60px;
+  scale: 0;
+  font-size: 1rem;
+  transition: 0.5s ease-in;
+}
+
+header .informasi .boxPesan.active {
+  top: 60px;
+  right: 50px;
+  scale: 1;
+}
+
+header .informasi .boxPesan.active::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #cccf;
+}
+
+header .informasi .boxPesan p {
+  margin: 0.5rem 0.4rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+}
+
+header .informasi .boxPesan p:last-child {
+  border-bottom: none;
+}
+
+header .informasi img {
+  width: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.menuBox {
+  position: fixed;
+  top: 0;
+  width: 80vw;
+  height: 100vh;
+  background-color: #f0f8ff;
+  left: -100vw;
+  z-index: 99;
+  transition: 0.5s ease-in-out;
+}
+
+.menuBox.active {
+  left: 0;
+  box-shadow: -5px 0 25px black;
+}
+
+.menuBox .menu {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.menuBox .menuContent {
+  position: relative;
+  top: 50px;
+  height: 100vh;
+}
+
+.menuBox .menuList {
+  margin: 10px 10px;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.8rem;
+  border-bottom: 2px solid #4b4a4a;
+}
+
+.menuBox .menuList a {
+  color: #232323;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.menuBox .menuList a:hover {
+  color: #363936;
+}
+
+.menuBox .menuList i {
+  margin-right: 15px;
+}
+
+.menuBox .menuContent .menuList:last-child {
+  position: absolute;
+  bottom: 90px;
+  border: none;
+}
+
+h1.nama {
+  margin: 1.5rem;
+}
+
+h1.nama span {
+  color: #d3b117;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.container .box {
+  width: 150px;
+  height: 100px;
+  background-color: #d3b117;
+}
+
+footer {
+  margin-top: 70px;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+/* Bug Page */
+
+.alert {
+  position: absolute;
+  background-color: #e48282;
+  color: #f50938;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  text-align: center;
+  filter: drop-shadow(0 0 4px #e48282);
+  right: -100vw;
+  padding: 0.3rem 2.5rem;
+  transition: 1s;
+}
+
+.BoxRiport {
+  border: 2px solid #ccc;
+  width: 90vw;
+  margin: 50px auto 0 auto;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.BoxRiport h2 {
+  text-align: center;
+}
+
+.BoxRiport .areaRiport {
+  margin: 20px 0;
+}
+
+.BoxRiport .areaRiport textarea {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  padding: 0.8rem;
+  font-weight: 600;
+  color: #4b4a4a;
+  letter-spacing: 0.5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.BoxRiport .areaRiport textarea:focus {
+  outline: none;
+}
+
+.BoxRiport .btn {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.BoxRiport .btn button {
+  border: 1px solid #178740;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  color: #f0f8ff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background-color: #20da64;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* darkmode */
+#darkMode,
+#darkMode .menuBox,
+#darkMode .boxPesan {
+  background-color: #232323;
+  color: #f0f8ff;
+}
+
+#darkMode header,
+#darkMode footer {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #f0f4f7;
+}
+
+#darkMode header .menu,
+#darkMode header .informasi .pesan,
+#darkMode .menuBox .menuList a,
+#darkMode .BoxRiport .areaRiport textarea {
+  color: #f0f8ff;
+}
+
+#darkMode header .informasi .pesan span {
+  border: 2px solid white;
+  height: 12px;
+  width: 12px;
+  transform: translateX(-11px) translateY(0px);
+}
+
+/* #darkMode header .informasi .boxPesan.active::before {
+  border-bottom: 20px solid #6e6e6e;
+} */
+/* #darkMode .menuBox {
+  background-color: #363936;
+  color: #f0f8ff;
+} */
+
+@media (min-width: 400px) {
+  .container {
+    width: 350px;
+    margin: 0 auto;
+  }
+
+  .menuBox {
+    width: 300px;
+  }
+
+  /* bug report */
+  .BoxRiport {
+    width: 400px;
+  }
+}
