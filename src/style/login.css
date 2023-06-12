@@ -1,0 +1,130 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2a2ac1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  border: 2px solid #ccc;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  width: 90vw;
+  padding: 0.5rem;
+}
+
+.container h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2rem;
+}
+
+.container h2 span {
+  color: #f5d033;
+  -webkit-text-stroke: 1px #4b4a4a;
+}
+
+.container .boxInput {
+  margin: 10px 0;
+  position: relative;
+}
+
+.container .boxInput input {
+  width: 100%;
+  padding: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid #363936;
+}
+.container .boxInput input:focus {
+  outline: none;
+}
+
+.container .boxInput input.pw {
+  width: 100%;
+  padding-right: 49px;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.container .boxInput i {
+  position: absolute;
+  width: 50px;
+  height: 41px;
+  right: -4px;
+  bottom: 0.3px;
+  background-color: #95989a;
+  border: 1px solid #363936;
+  border-top: none;
+  border-bottom: none;
+  /* border-right: none; */
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.container .boxInput i.cp {
+  height: 40px;
+}
+
+.container .btn {
+  position: relative;
+  margin: 20px 0 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container .btn button {
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: #f0f8ff;
+  letter-spacing: 1px;
+  font-weight: 600;
+  background-color: #2a2ac1;
+  z-index: 9;
+}
+
+.container p {
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #232323;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.container p a {
+  margin-left: 5px;
+  color: #363936;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 350px;
+  }
+}
