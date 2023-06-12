@@ -245,7 +245,7 @@ footer p {
   letter-spacing: 1px;
   text-align: center;
   filter: drop-shadow(0 0 4px #e48282);
-  right: -0;
+  right: 0;
   padding: 0.3rem 2.5rem;
   display: none;
   transition: 1s;
