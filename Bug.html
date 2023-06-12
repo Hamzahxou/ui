@@ -71,11 +71,10 @@
         let Riport = document.getElementById("Riport").value;
 
         if (Riport === "") {
-          kosong.style.right = "20px";
+           kosong.style.display = "block";
           btn.style.display = "none";
           setTimeout(() => {
-            kosong.style.transform = "rotate(360deg)";
-            kosong.style.right = "-100vw";
+            kosong.style.display = "none";
           }, 5000);
           setTimeout(() => {
             btn.style.display = "inline";
